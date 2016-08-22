@@ -42,7 +42,6 @@
  }
 
  a{
-  color: #8e888a;
   text-decoration: none;
   outline: none;
  }
@@ -123,6 +122,15 @@
  	.handle{
  		display: block;
  	}
+
+
+  .post-podcast div.post{
+    -webkit-order:2;
+  }
+
+ .post-painel div.post{-webkit-order:1;}
+
+
  }
 
 
@@ -130,12 +138,13 @@
 
  .container {
    display: flex; /* or inline-flex */
+   margin-bottom: 45rem;
  }
 
 
  .post-podcast {
      width:750px;
-     height:750px;
+     height:500px;
      margin-left:25px;
      display: -webkit-flex;
      display: -moz-flex;
@@ -160,18 +169,20 @@
      flex:1 1 auto;
  }
 
- .post-podcast div.post{
-
- }
 
   .post p{
     padding: 20px;
   }
 
 
+  .post img{
+    width: 100%;
+    height: auto;
+  }
+
  .post-painel{
    width:450px;
-   height:450px;
+   height:250px;
    margin-right:25px;
    margin-left:25px;
    display: -webkit-flex;
@@ -200,6 +211,25 @@
  }
 
 
+ .post .header-painel{
+   background-color: #4EBEFF;
+   margin: 0 auto;
+   text-align: center !important;
+   font-size: 1.2em;
+ }
+
+
+
+ @media screen and (max-width: 580px){
+
+
+   .post-painel div.post{-webkit-order:1;}
+   .post-podcast div.post{ -webkit-order:2; }
+
+
+
+
+ }
 
 
    @media screen and (max-width: 1216px) {
@@ -268,18 +298,22 @@
    color:#FFBF4F;
  }
 
- footer{
-   margin-top: 100px;
+ .footer{
+   margin-top: 250px;
    text-align:center;
    display:block;
    color:#fff;
    padding:20px;
  }
 
- footer
+ .footer
  {
    background:#e74c3c;
-   height: 100px;
+
+ }
+
+ .footer a{
+   color:#fff;
  }
 
 
@@ -306,3 +340,52 @@
  	background: #f49c14;
  	box-shadow: 0 .45em 0 0 #f49c14, 0 .9em 0 0 #f49c14;
  }
+
+
+.container-post:after {
+  content:"";
+  display:table;
+  clear:both
+}
+
+
+.context-center{
+  text-align:justify !important;
+}
+
+
+
+form{
+	margin-top: 2rem;
+}
+
+input[type="text"], input[type="email"], textarea{
+  width:85%;
+  height: 1em;
+  border: 2px solid #000000;
+  padding: 1em;
+  margin: .5em 0 2em 0;
+}
+
+
+textarea{
+  min-height:10em;
+}
+
+input[type="submit"], .btn{
+  background-color: #36AFFF; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+
+.title{
+  margin-left: 50px;
+}
