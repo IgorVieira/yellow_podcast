@@ -13,3 +13,4 @@
 //= require jquery
 //= require_tree .
 //= bemore.menu
+//= jquery.jplayer.min
